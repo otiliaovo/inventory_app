@@ -1,0 +1,33 @@
+body { font-family: sans-serif; padding: 20px; }
+.container { max-width: 600px; margin: auto; }
+.head {text-align: center; color: #1b29e8}
+input, button { padding: 8px; margin: 5px 0; width: 100%; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+th { background: #119f30; }
+
+.input-group {
+    position: relative; /* 让 autocomplete 绝对定位相对于输入框 */
+    margin-bottom: 10px;
+}
+
+.autocomplete-list {
+    position: absolute;
+    top: 100%;             
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;  
+}
+
+.autocomplete-list div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-list div:hover {
+    background-color: #f0f0f0;
+}

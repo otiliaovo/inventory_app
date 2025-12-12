@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>inventury</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="head">Inventury Record</h1>
+        <div class="container">
+            <div class="input-group">
+                <label>Material Number:</label>
+                <input id="itemno" type="text" placeholder="Input or search the item" />
+                <div class="autocomplete-list"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Gradename:</label>
+                <input id="gradename" type="text" placeholder="Input or search the item" />
+                <div class="autocomplete-list"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Batch Number:</label>
+                <input id="batchno" type="number" />
+            </div>
+
+            <div class="input-group">
+                <label>Quantity:</label>
+                <input id="qty" type="number"/>
+            </div>
+
+            <button id="addBtn">ADD</button>
+            <button id="exportBtn">EXPORT</button>
+
+            <table id="recordTable">
+                <thead>
+                    <tr>
+                        <th>Material No</th>
+                        <th>Gradename</th>
+                        <th>Batch Number</th>
+                        <th>Quantity/KG</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            
+        </div>
+        <script src="data/materialno.js"></script>
+        <script src="data/grades.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
