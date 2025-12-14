@@ -105,10 +105,14 @@ function exportcsv(){
     if (records.length === 0) return alert("No Records");
     let csvContent = "data:text/csv;charset=utf-8,";
     csvContent += "Index,Material No,Gradename,Batch Number,Quantity/KG,Location\n"
+    let totalQty = 0;
+
     records.forEach((r,index) => {
+        const qty = Number(r.qty);
+        totalQty += qty;
         csvContent += `${index+1},${r.itemno},${r.gradename},${r.batchno},${r.qty},${r.loca}\n`;
     });
-
+    csvContent += `TOTAL,,,,${totalQty},\n`;
 // - click and download
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
