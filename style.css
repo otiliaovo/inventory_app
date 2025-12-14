@@ -1,10 +1,56 @@
 body { font-family: sans-serif; padding: 20px; }
 .container { max-width: 600px; margin: auto; }
-.head {text-align: center; color: #1b29e8}
+.head {text-align: center; color: black}
 input, button { padding: 8px; margin: 5px 0; width: 100%; }
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-th { background: #119f30; }
+th { background: #5e88b7; 
+    color:#fff; 
+    text-align: center;
+}
+.button-group {
+    display: flex;
+    gap: 10px;    
+    margin: 10px 0;
+}
+.button-group button {
+    flex: 1;        /* 两个按钮平分容器宽度 */
+    font-weight: bold; /* 字体加粗 */
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.button-group button:hover {
+    opacity: 0.9;
+}
+
+table button.edit-btn {
+    background-color: #119f30; /* 绿色 */
+    color: #fff;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table button.edit-btn:hover {
+    opacity: 0.9;
+}
+
+table button.delete-btn {
+    background-color: #e53935; /* 红色 */
+    color: #fff;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table button.delete-btn:hover {
+    opacity: 0.9;
+}
 
 .input-group {
     position: relative; /* 让 autocomplete 绝对定位相对于输入框 */

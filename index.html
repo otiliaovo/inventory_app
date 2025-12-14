@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="head">Inventury Record</h1>
+        <h1 class="head">Inventory Record</h1>
         <div class="container">
             <div class="input-group">
                 <label>Material Number:</label>
@@ -28,10 +28,17 @@
             <div class="input-group">
                 <label>Quantity:</label>
                 <input id="qty" type="number"/>
-            </div>
 
-            <button id="addBtn">ADD</button>
-            <button id="exportBtn">EXPORT</button>
+            </div>
+                <div class="input-group">
+                <label>Location:</label>
+                <input id="loca" type="text"/>
+            </div>
+            
+            <div class="button-group">
+        <button id="addBtn">ADD</button>
+        <button id="exportBtn">EXPORT</button>
+            </div>
 
             <table id="recordTable">
                 <thead>
@@ -40,14 +47,15 @@
                         <th>Gradename</th>
                         <th>Batch Number</th>
                         <th>Quantity/KG</th>
+                        <th>Location</span></th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
             
         </div>
-        <script src="data/materialno.js"></script>
-        <script src="data/grades.js"></script>
+        <script src="data/materialGradeMap.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
